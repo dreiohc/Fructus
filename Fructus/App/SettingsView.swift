@@ -38,7 +38,17 @@ struct SettingsView: View {
           
           // MARK: - SECTION 3
           
-          
+          GroupBox(
+            label: SettingsLabelView(labelText: "Application", labelImage: "apps.iphone")
+          ) {
+            SettingsRowView(name: "Developer", content: "John / Jane")
+            SettingsRowView(name: "Designer", content: "Rober Petras")
+            SettingsRowView(name: "Compatbility", content: "iOS 14")
+            SettingsRowView(name: "Website", linkLabel: "SwiftUI MasterClass", linkDestination: "swiftuimasterclass.com")
+            SettingsRowView(name: "Twitter", linkLabel: "@RobertPetras", linkDestination: "twitter.com/robertpetras")
+            SettingsRowView(name: "SwiftUI", content: "2.0")
+            SettingsRowView(name: "Version", content: "1.1.0")
+          } //: BOX
         } //: VSTACK
         .navigationBarTitle(Text("Settings"), displayMode: .large)
         .navigationBarItems(trailing:
